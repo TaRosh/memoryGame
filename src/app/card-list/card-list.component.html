@@ -1,0 +1,40 @@
+<div *ngFor="let card of cards; let i = index">
+  <div *ngIf="i % 6 === 0" class="row">
+    <div (click)="cardPicked(cards[i], i)"
+         [@cardInGame]="cards[i].inGame"
+         [@cardFaceUp]="cards[i].isFaceUp"
+         class="col">
+      <app-card data-tid="Card"   [card]="cards[i]"></app-card>
+    </div>
+    <div (click)="cardPicked(cards[i+1], i+1)"
+         [@cardInGame]="cards[i+1].inGame"
+         [@cardFaceUp]="cards[i+1].isFaceUp"
+         class="col">
+      <app-card data-tid="Card" [card]="cards[i + 1]"></app-card>
+    </div>
+    <div (click)="cardPicked(cards[i+2], i+2)"
+         [@cardInGame]="cards[i+2].inGame"
+         [@cardFaceUp]="cards[i+2].isFaceUp"
+         class="col">
+      <app-card data-tid="Card"   [card]="cards[i + 2]"></app-card>
+    </div>
+    <div (click)="cardPicked(cards[i+3], i+3)"
+         [@cardInGame]="cards[i+3].inGame"
+         [@cardFaceUp]="cards[i+3].isFaceUp"
+         class="col">
+      <app-card data-tid="Card"  [card]="cards[i + 3]"></app-card>
+    </div>
+    <div (click)="cardPicked(cards[i+4], i+4)"
+         [@cardInGame]="cards[i+4].inGame"
+         [@cardFaceUp]="cards[i+4].isFaceUp"
+         class="col">
+      <app-card data-tid="Card"  [card]="cards[i + 4]"></app-card>
+    </div>
+    <div (click)="cardPicked(cards[i+5], i+5)"
+         [@cardInGame]="cards[i+5].inGame"
+         [@cardFaceUp]="cards[i+5].isFaceUp"
+         class="col">
+      <app-card data-tid="Card" [card]="cards[i + 5]"></app-card>
+    </div>
+  </div>
+</div>
